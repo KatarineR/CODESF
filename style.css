@@ -21,6 +21,7 @@ header {
 #menu {
     text-decoration: none;
     text-align: center;
+    width: 100%;
 }
 
 #menu li {
@@ -82,7 +83,6 @@ article > h1 {
 
 .missão-visão-valores div {
     color: #08297D;
-    border: solid 2px #0F833C;
     padding: 20px;
     text-align: center;
 }
@@ -95,20 +95,69 @@ article > h1 {
     text-align: center;
 }
 
+.linha {
+    position: relative;
+}
+
+.linha::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2px; /* Largura da borda esquerda */
+    background: radial-gradient(circle, #08297D, #6A97A8, #76b993, #ffea28a3, transparent 85%);
+    border-radius: 10px 0 0 10px; 
+}
+
+.Câmaras-Técnicas {
+    height: 600px;
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+    border-radius: 35px;
+}
+
+.fundo-Câmaras-Técnicas{
+    background-image: linear-gradient(135deg, #119236a5, #6A97A8, #08297dd5);
+    width: 100%;
+    padding: 80px;
+    margin-top: 50px;
+}
+
+.Câmaras-Técnicas h1 {
+    text-align: center;
+    color: #08297D;
+    font-size: 30px;
+    padding: 25px;
+}
+
+.Câmaras-Técnicas p {
+    text-align: center;
+    color: #08297D;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     .missão-visão-valores {
-        grid-template-columns: 1fr 1fr; /* Duas colunas em tablets */
-        justify-content: center;
+        grid-template-columns: 100%; /* Duas colunas em tablets */
+        
     }
 }
 
 /* Responsividade para smartphones */
 @media (max-width: 480px) {
-    .missão-visão-valores {
-        grid-template-columns: 100%; /* Uma coluna em smartphones */
-    }
-    
     .texto-imagemfrutal {
         font-size: 30px; /* Ajusta o tamanho da fonte para telas menores */
     }
