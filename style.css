@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+header {
+    background-image: linear-gradient(to right, #08297D, #6A97A8, #76b993, #FFEA28);
+}
+
+#imgheader {
+    display: flex;
+    height: 110px;
+    justify-content: center;
+}
+
+#menu {
+    text-decoration: none;
+    text-align: center;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li a {
+    display: inline-block;
+    padding: 18px;
+    color: #08297D;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    color: #0F833C;
+}
+
+#containerimg {
+    position: relative;
+    width: 100%;
+}
+
+.imgfrutal {
+    width: 100%;
+}
+
+.texto-imagemfrutal {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: #08297D;
+}
+
+.icone-missão-valores-visão {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+article > h1 {
+    text-align: center;
+    color: #0F833C;
+    margin: 50px;
+    font-size: 30px;
+}
+
+.missão-visão-valores {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Define as colunas igualmente espaçadas */
+}
+
+.missão-visão-valores div {
+    color: #08297D;
+    border: solid 2px #0F833C;
+    padding: 20px;
+    text-align: center;
+}
+
+.missão-visão-valores div h2 {
+    text-align: center;
+}
+
+.missão-visão-valores div p {
+    text-align: center;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .missão-visão-valores {
+        grid-template-columns: 1fr 1fr; /* Duas colunas em tablets */
+        justify-content: center;
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+    .missão-visão-valores {
+        grid-template-columns: 100%; /* Uma coluna em smartphones */
+    }
+    
+    .texto-imagemfrutal {
+        font-size: 30px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
